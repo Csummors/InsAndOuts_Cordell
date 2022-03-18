@@ -1,6 +1,8 @@
 //EyeTv by cordell lane
 //part 2 of the eye tv design
 
+
+//still need to work on timer, i was acting up so i delted it
 //create random color helpful
 Float r = random(0,256);
 Float b = random(0,256);
