@@ -81,16 +81,13 @@ image(c3,0,0,600,400);
     triangle(100,300,300,100,500,300);
     text(s, 100, 70);
     text(t, 20, 400);
-    if(keyPressed == true){
-      fill(255);
-      ellipse(width/2,height/2,100,100);
-    }
-    if(keyPressed == true){
-      fill(0);
-      ellipse(width/2,height/2,60,60);
+    fill(255);
+    ellipse(width/2,height/2,100,100);
+    fill(0);
+    ellipse(width/2,height/2,60,60);
     }
  }
-}
+
 //subtitle for tide commerical 
 void subT1(){
  text(chT[0],10,20);
