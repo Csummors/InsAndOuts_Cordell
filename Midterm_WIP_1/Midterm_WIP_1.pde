@@ -20,23 +20,20 @@ t3=loadImage("test3.jpg");
 }
 
 void draw(){
-
+turnChannel();
 }
 
-void ChannelL(){
+ void turnChannel(){
   if(mousePressed &&(mouseButton == LEFT)){
      image(t1,0,0,600,400);
+     text(chL[0],10,20);
+     
+  } else if(mousePressed &&(mouseButton == RIGHT)){
+    image(t3,0,0,600,400);
+    text(chR[0],10,20);
   } else{ 
-        image(t2,0,0,600,400);
-
+    image(t2,0,0,600,400);
+     text(chL[2],10,20);
+   
   }
 }
- void ChannelR(){   
- if(mousePressed &&(mouseButton == RIGHT)){
-    image(t3,0,0,600,400);
-
-   } else{ 
-    image(t2,0,0,600,400);
-
-  }    
- }  
