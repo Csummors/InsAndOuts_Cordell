@@ -1,4 +1,4 @@
-//Draft one 
+//channel suffing Cordell 
 //inspired by tv
 //heavy with array
 

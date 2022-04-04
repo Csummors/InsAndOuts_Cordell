@@ -1,3 +1,5 @@
+//images and text are now working
+
 String[]chSt={"CHANNEL 1","CHANNEL 2","CHANNEL 3","CHANNEL 4","CHANNEL 5","CHANNEL 6","CHANNEL 7","CHANNEL 8","CHANNEL 9","CHANNEL 10"};
 
 PImage[] ch= new PImage[10];
@@ -14,6 +16,8 @@ void channels(){
 }
 
 void mousePressed() {
+  println(ch[chIndex]);
+  println(chSt[chIndex]);
   image(ch[chIndex],0,0,600,400);
   text(chSt[chIndex],10,20);
   if (mouseButton == RIGHT) {
@@ -23,10 +27,12 @@ void mousePressed() {
       chIndex= chIndex+1;
     }
   }    
- 
+ //my god still having problems with the left click button
+ //it still hitting ch -1 why?
+ //fixed the problem
   if (mouseButton == LEFT){
-    if (chIndex==-1){
-      chIndex=10;
+    if (chIndex==0){
+      chIndex=9;
     }else{
       chIndex=chIndex-1; }
   }
