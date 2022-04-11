@@ -5,10 +5,11 @@
 // Might try to cretae a oject void Channel[] channel=new channel[11];
 
 //new font
-PFont font;
+PFont Tvfont;
 
 void setup(){
-  size(600,400);
+  size(1000,700);
+  Tvframe();
    channels();
    mousePressed();
 }
@@ -17,6 +18,7 @@ void draw(){
  
   
   //Testimage();
-  font = createFont("PressStart2P-Regular.ttf",20);
-  textFont(font);
+  Tvfont = createFont("PressStart2P-Regular.ttf",20);
+  textFont(Tvfont);
+  fill(0,128,0);
 }

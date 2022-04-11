@@ -6,10 +6,7 @@ PImage[] ch= new PImage[10];
 int chIndex=0;
 
 void channels(){
-  
-  
-  text(chSt[chIndex],10,20);
-  
+ 
   for(int i=0;i<ch.length;i++){
   ch[i]=loadImage("ch"+i+".jpg");
   }
@@ -18,8 +15,8 @@ void channels(){
 void mousePressed() {
   println(ch[chIndex]);
   println(chSt[chIndex]);
-  image(ch[chIndex],0,0,600,400);
-  text(chSt[chIndex],10,20);
+  image(ch[chIndex],180,80,650,560);
+  text(chSt[chIndex],200,120);
   if (mouseButton == RIGHT) {
     if (chIndex==ch.length-1){
     chIndex=0;
