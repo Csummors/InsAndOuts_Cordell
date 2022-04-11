@@ -1,3 +1,5 @@
+//Cordell Lane
+//Title:All Of The Lights
 int LED0=13;
 int LED2=12;//LED 2 and 1 are switch around plug it in weird
 int LED1=11;//fix the LED by swiching the number order in the code
