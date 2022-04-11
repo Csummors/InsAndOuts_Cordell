@@ -1,24 +1,26 @@
-//channel suffing Cordell 
+import processing.video.*;
+
+//channel surffing Cordell 
 //inspired by tv
-//heavy with array
 
 // Might try to cretae a oject void Channel[] channel=new channel[11];
-
 //new font
-PFont Tvfont;
+PFont font;
+//add capture video
+Capture video;
 
 void setup(){
-  size(1000,700);
+  size(600,400);
   Tvframe();
-   channels();
-   mousePressed();
+  channels();
+  mousePressed();  
+  //OnOff();
 }
-
+void captureEvent(Capture video){
+  video.read();
+}
 void draw(){
- 
-  
   //Testimage();
-  Tvfont = createFont("PressStart2P-Regular.ttf",20);
-  textFont(Tvfont);
-  fill(0,128,0);
+  font = createFont("PressStart2P-Regular.ttf",20);
+  textFont(font);
 }

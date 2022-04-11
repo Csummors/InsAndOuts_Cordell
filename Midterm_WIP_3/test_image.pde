@@ -10,7 +10,7 @@ t2=loadImage("test2.jpg");
 t3=loadImage("test3.jpg");
 
   if(mousePressed &&(mouseButton == LEFT)){
-     image(t1,0,0,600,400);
+     
      text(chL[0],10,20);
      
   } else if(mousePressed &&(mouseButton == RIGHT)){
