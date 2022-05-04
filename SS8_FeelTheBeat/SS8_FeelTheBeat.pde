@@ -53,6 +53,8 @@ void setup() {
   myBs5 = new BeatSquare(color(R5+val,0,Y5+val),a*4,width,20,r5);
   myBs6 = new BeatSquare(color(0,G6-val,255),a*5,width,20,r6);
   
+
+  
   printArray(Serial.list()); // this line prints the port list to the console
   String portName = Serial.list()[2]; //Port number is 2
   myPort = new Serial(this, portName, 9600);
@@ -60,6 +62,7 @@ void setup() {
 }
 
 void draw() {
+  println(val);
   
   for (int i = 0; i < 255; i++) {
   float r = random(256);
@@ -110,12 +113,15 @@ class BeatSquare {
     fill(c);
     rectMode(CENTER);
     rect(xpos,ypos,50,r0+xheight+val);
-    if(xheight<0){
-    xheight=xheight+10;
-    }if(xheight>400){
-     xheight=xheight*0;
-    }else{
-    xheight=xheight+10;
+    if(val>=80&& val>0){
+    xheight=xheight-10;
+    }if(val<=150&& val>80){
+     xheight=xheight+10;
+   }if(val>=255&&val<150){
+     xheight=xheight-400;
+   }
+    else{
+    xheight=xheight+1;
     }
   }
 
