@@ -50,10 +50,12 @@ void setup() {
   hitMarkerSuccessImage = loadImage("hitMarker_success.png");
   
   // Load audio file
+  //add any music you want but Wav file is better
   musicTrack = new SoundFile(this, "NYG.wav");
   
   // Load track metadata
-  trackData = new TrackData("C:/Users/cordell//Desktop/rhythmgame/data/trackinfo.txt");
+  // go to sketch and data then copy the dir 
+  trackData = new TrackData("C:/Users/corde/OneDrive/Desktop/processing-3.5.4/InsAndOuts_Cordell/FinalProject_BeatMap/data/trackinfo.txt");
   
   //musicTrack.jump(30);
   // Start the music!
@@ -114,10 +116,9 @@ void drawTrack() {
   translate(width/2, height*0.75f);
   rotateX(0.75f);
   
-  /*
-   * Draw the tracks / bars / notes
-   */
-  float playbackPos = musicTrack.position();
+  
+   //Draw the tracks / bars / notes
+   float playbackPos = musicTrack.position();
     
   // Figure out spacing / layout
   float barStartX = -LANE_SPACING_PIXELS*(NUM_NOTE_TYPES-1)*0.5f;  
