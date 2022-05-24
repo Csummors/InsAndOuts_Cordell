@@ -9,17 +9,6 @@ import processing.serial.*;
 Serial myPort; // creates object from Serial class
 int vaL1=0;
 
-//Tv image
-float a;
-PImage tv;
-PFont font;
-String s = "Welcome to The Eye ";
-String t = "Big Brother is watching You";
-Float r = random(0,256);
-Float b = random(0,256);
-Float g = random(0,256);
-
-
 
 
 // Timing / gameplay-related constants
@@ -67,7 +56,7 @@ void setup() {
   hitMarkerImage = loadImage("hitMarker.png");
   hitMarkerFailureImage = loadImage("hitMarker_failure.png");
   hitMarkerSuccessImage = loadImage("hitMarker_success.png");
-  tv = loadImage("OldTv.jpg");
+ 
   
   // Load audio file
   //add any music you want but Wav file is better
@@ -84,7 +73,7 @@ void setup() {
   //serial port
   // this line prints the port list to the console
   printArray(Serial.list()); 
-  String portName = Serial.list()[2]; //Port number is 2
+  String portName = Serial.list()[0]; //Port number is 2
   myPort = new Serial(this, portName, 9600);
   
   LightShow();
@@ -92,7 +81,6 @@ void setup() {
 
 void draw() {
   background(0);
-
   detectFailedHits();
   
   textSize(30);
@@ -104,5 +92,5 @@ void draw() {
   
   drawTrack();
   
-  LED();
+  //LED();
 }

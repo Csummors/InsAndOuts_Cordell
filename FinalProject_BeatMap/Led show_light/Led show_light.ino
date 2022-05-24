@@ -6,7 +6,7 @@ int LED4=9;
 
 
 //LED value
-int vaL1=0;
+int vaL1;
 
 void setup() {
   // put your setup code here, to run once:
@@ -23,7 +23,7 @@ void loop() {
   
   /////////Uncomment Serial.print() OR Serial.write() and not both!//////////////
   
-  //Serial. println(vaL1); //to send human-readable data to Arduino monitor
+  Serial. println(vaL1); //to send human-readable data to Arduino monitor
   //Serial.write(vaL1);  //to send binary data to Processing
 
 //LED
@@ -36,7 +36,7 @@ void loop() {
     digitalWrite(13, HIGH);
    
   }
-  else if (vaL1 == 1) { // If 1 received
+  if (vaL1 == 1) { // If 1 received
       digitalWrite (12,HIGH);
       
   }
@@ -44,13 +44,14 @@ void loop() {
     digitalWrite(11,HIGH)
     
   }
-  else if (vaL1 == 3) { // If 3 received
+   if (vaL1 == 3) { // If 3 received
     digitalWrite(10,HIGH)
    
   }
-  else if (vaL1 == 4) { // If 4 received
+  if (vaL1 == 4) { // If 4 received
     digitalWrite(9,HIGH)
    
   }
+ 
   
 }

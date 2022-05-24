@@ -3,10 +3,10 @@ void keyPressed() {
   
   // Determine which note this key corresponds to 
   int note;
-  if (keyCode  == LEFT) note = 0;
-  else if (keyCode  == UP) note = 1;
-  else if (keyCode  == RIGHT) note = 2;
-  else return;
+  if (keyCode  == LEFT)note = 0;
+    else if (keyCode  == UP)note = 1;
+    else if (keyCode  == RIGHT)note =2;
+    else return;
   
   float playbackPos = musicTrack.position() - trackData.introLength;
   
@@ -37,6 +37,7 @@ void keyPressed() {
         println("Perfect!!!");
         text("Perfect!!!", width-10, 50);
         score += PERFECT_SCORE * comboMultiplier;
+         myPort.write(0);
         matchedHit = hit;
         break;
       }
@@ -51,6 +52,7 @@ void keyPressed() {
         println("OK i see you!");
         text("OK i see you!!!!", width-10, 50);
         score += OK_SCORE * comboMultiplier;
+        myPort.write(1);
         matchedHit = hit;
         break;
       }
