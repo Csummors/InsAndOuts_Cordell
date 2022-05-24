@@ -1,12 +1,12 @@
 /*task at hand 
 some of the code and assets are from straybasilisk
 1[x]load and play
-2[x]get exact audio
+2[x]get audio
 3[x]spefying notes 
 4[x]UI to match notes 
-5[x]use imnput(detecting hit timing)
+5[x]use input(detecting hit timing)
 6[x]scoring
-7[x]juice(way to make it cordell)
+7[x]juicy(way to make it cordell)
 
 //lenght of intro 15sec
 //bpm 220(Prestissimo)
