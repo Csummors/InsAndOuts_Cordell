@@ -1,3 +1,5 @@
+//borrowed code JasonMDavey
+
 void detectFailedHits() {
   float playbackPos = musicTrack.position() - trackData.introLength;
   

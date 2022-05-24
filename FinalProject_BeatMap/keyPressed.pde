@@ -1,3 +1,6 @@
+//modified code JasonMDavey
+//mixed my own
+
 void keyPressed() {
   if (key != CODED) return;
   
